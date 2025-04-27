@@ -82,3 +82,5 @@ yandex-cloud-ml-sdk==0.8.0
 yandexcloud==0.340.0
 yarl==1.19.0
 zstandard==0.23.0
+python-docx
+faiss-cpu
