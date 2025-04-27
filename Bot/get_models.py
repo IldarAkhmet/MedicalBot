@@ -7,8 +7,8 @@ import os
 load_dotenv(find_dotenv(usecwd=True))
 def ya_model():
     model = YandexGPT(
-        iam_token=YANDEX_TOKEN,
-        folder_id=YANDEX_FOLDER_ID,
+        iam_token=os.environ['YANDEX_TOKEN'],
+        folder_id=os.environ['YANDEX_FOLDER_ID'],
         template=0
     )
 
