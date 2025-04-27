@@ -1,7 +1,7 @@
-Bot/TOKEN.py
 venv39/
 main.py
 forDocker/
-Data
+Data/mkb-10_1999.pdf
+Data/Руцкая Тамара. Полный справочник симптомов. Самодиагностика заболеваний - royallib.com.doc
 .env
-
+Bot/test.py
