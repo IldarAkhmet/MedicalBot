@@ -1,8 +1,13 @@
+import os
+
 from aiogram import Bot, Dispatcher, executor, types
-from TOKEN import TOKEN
+from dotenv import load_dotenv, find_dotenv
+from get_RAG_models import get_qa_answer
 
 
-bot = Bot(TOKEN)  # создание бота
+load_dotenv(find_dotenv())
+
+bot = Bot(os.environ['TELEGRAM_TOKEN'])  # создание бота
 dp = Dispatcher(bot)  # анализ и инициализация всех входящих апдейтов, функционал бота
 
 
@@ -10,6 +15,9 @@ dp = Dispatcher(bot)  # анализ и инициализация всех вх
 async def echo(payload: types.Message):
     await payload.reply('Привет')
 
+@dp.message_handler(commands='start')
+async def echo(payload: types.Message):
+    await payload.reply('Привет')
 
 
 if __name__ == '__main__':
